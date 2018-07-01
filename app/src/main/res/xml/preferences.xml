@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/reading">
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="prefs_stay_awake"
+            android:summary="Prevent screen turn off while reading"
+            android:title="Stay awake" />
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="prefs_remember_last_page"
+            android:summary="Pick up where you left off"
+            android:title="Remember last page" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/general">
+        <Preference
+            android:key="prefs_about"
+            android:persistent="false"
+            android:title="@string/about">
+
+            <intent
+                android:targetClass="tz.co.wadau.documentscanner.AboutActivity"
+                android:targetPackage="tz.co.wadau.documentscanner" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

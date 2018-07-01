@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="tz.co.wadau.documentscanner.ShareAsPictureActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_organize_pages"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlayDark"
+        app:navigationIcon="@drawable/ic_action_back_black"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:title="@string/share_as_picture"
+        app:titleTextColor="@android:color/primary_text_light" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:animateLayoutChanges="true"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/info_tap_more_options"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="@color/colorMoreInfo"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="?listPreferredItemPaddingLeft"
+                android:paddingRight="?listPreferredItemPaddingRight">
+
+                <LinearLayout
+                    android:id="@+id/pdf_inner_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/pdf_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="16dp"
+                        app:srcCompat="@drawable/ic_info_blue" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="72dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pdf_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="@string/drag_drop_to_organize"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+                    </LinearLayout>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/info_close"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="4dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:srcCompat="@drawable/ic_action_cancel" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_share_as_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/info_tap_more_options"
+                android:background="@color/colorLightGray"
+                android:clipToPadding="false"
+                android:paddingLeft="3dp"
+                android:paddingTop="2dp"
+                android:paddingRight="7dp"
+                android:paddingBottom="7dp" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_organize_pages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="24dp"
+            android:visibility="gone"
+            app:elevation="2dp"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_action_share_white" />
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

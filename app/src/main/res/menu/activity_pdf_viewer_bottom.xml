@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_toggle_view"
+        android:icon="@drawable/ic_action_swipe_vertical"
+        android:title="@string/swipe_vertical"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_contents"
+        android:icon="@drawable/ic_action_contents"
+        android:title="@string/table_of_contents"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_bookmark"
+        android:icon="@drawable/ic_action_bookmark"
+        android:title="@string/bookmark"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_toggle_night_mode"
+        android:icon="@drawable/ic_action_night_mode"
+        android:title="@string/night_mode"
+        app:showAsAction="always" />
+</menu>

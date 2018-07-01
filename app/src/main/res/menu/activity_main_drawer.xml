@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/first_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_all_documents"
+            android:icon="@drawable/ic_menu_all_documents"
+            android:title="@string/all_documents" />
+
+        <item
+            android:id="@+id/nav_stared"
+            android:icon="@drawable/ic_nav_stared"
+            android:title="@string/stared" />
+
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_menu_tools"
+            android:title="@string/pdf_tools" />
+
+        <!--<item-->
+        <!--android:id="@+id/nav_scan"-->
+        <!--android:icon="@drawable/ic_menu_scan"-->
+        <!--android:title="@string/scan" />-->
+
+    </group>
+
+    <group
+        android:id="@+id/second_group"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_rate"
+            android:icon="@drawable/ic_nav_stared"
+            android:title="@string/rate_this_app" />
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/share_this_app" />
+
+        <item
+            android:id="@+id/nav_more_apps"
+            android:icon="@drawable/ic_menu_download_more_apps"
+            android:title="@string/download_more_apps" />
+
+        <item
+            android:id="@+id/nav_remove_ads"
+            android:icon="@drawable/ic_menu_remove_ads"
+            android:title="@string/remove_ads" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_about"
+            android:title="@string/about" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_settings"
+            android:title="@string/settings" />
+    </group>
+</menu>

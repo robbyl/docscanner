@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowBackground">@color/colorWindowBackground</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!--<item name="android:windowLightNavigationBar">true</item>-->
+        <!--<item name="android:navigationBarColor">@android:color/white</item>-->
+        <!--<item name="android:navigationBarDividerColor"> @color/colorNavBarSeparator</item>-->
+
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionModeBackground">@color/colorDarkGray</item>
+        <item name="android:actionModeCloseDrawable">@drawable/ic_action_back</item>
+        <!--<item name="android:actionModeStyle">@style/AppTheme.ActionMode</item>-->
+        <!--<item name="actionModeStyle">@style/AppTheme.ActionMode</item>-->
+        <item name="actionModeStyle">@style/CustomActionModeStyle</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_action_search"
+        android:title="@string/search"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_action_sort"
+        android:title="@string/sort"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item
+                android:id="@+id/action_by_name"
+                android:title="@string/by_name" />
+
+            <item
+                android:id="@+id/action_by_date_modified"
+                android:title="@string/by_date_modified" />
+
+            <item
+                android:id="@+id/action_by_size"
+                android:title="@string/by_size" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_list_view"
+        android:icon="@drawable/ic_action_list_view"
+        android:title="@string/list_view"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_grid_view"
+        android:icon="@drawable/ic_action_grid_view"
+        android:title="@string/grid_view"
+        app:showAsAction="ifRoom">
+        <menu xmlns:android="http://schemas.android.com/apk/res/android">
+            <item
+                android:id="@+id/action_two_columns"
+                android:title="@string/_2_columns" />
+            <item
+                android:id="@+id/action_three_columns"
+                android:title="@string/_3_columns" />
+            <item
+                android:id="@+id/action_four_columns"
+                android:title="@string/_4_columns" />
+            <item
+                android:id="@+id/action_five_columns"
+                android:title="@string/_5_columns" />
+            <item
+                android:id="@+id/action_six_columns"
+                android:title="@string/_6_columns" />
+        </menu>
+    </item>
+</menu>

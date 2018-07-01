@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#70ca90</color>
+    <color name="colorPrimaryDark">#e8ebed</color>
+    <color name="colorAccent">#70ca90</color>
+    <color name="color54">#8A000000</color>
+
+    <color name="colorPrimaryNight">#243447</color>
+    <color name="colorPrimaryDarkNight">#192532</color>
+    <color name="colorTitleTextNight">#C2FFFFFF</color>
+    <color name="colorTitleTextLight">#212121</color>
+    <color name="colorDividerLight">#dbdbdb</color>
+
+    <color name="colorLightGray">#e0e0e0</color>
+    <color name="colorPDFViewBg">#e0e0e0</color>
+    <color name="colorWindowBackground">#f9f9f9</color>
+    <color name="colorSelectedPDFs">#EEEEEE</color>
+    <color name="colorStatusBar">#e8ebed</color>
+    <color name="colorDarkGray">#757575</color>
+    <color name="colorDarkerGray">#616161</color>
+    <color name="colorNameOverlay">#F0FFFFFF</color>
+    <color name="colorEmptyStateBg">#EDEDED</color>
+    <color name="colorEmptyStateTextPrimary">#919191</color>
+    <color name="colorMoreInfo">#daf1e2</color>
+    <color name="colorLightGreen">#ecf8f0</color>
+    <!--<color name="colorSeparator">#6b000000</color>-->
+    <color name="colorSeparator">#e0e0e0</color>
+    <color name="colorSelectedImage">#B4ffffff</color>
+    <color name="colorDarkGreen">#379558</color>
+
+    <color name="colorWhite">#ffffffff</color>
+    <color name="color12000000">#1E000000</color>
+    <color name="colorAmber">#FFC107</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorNavBarSeparator">#e0e0e0</color>
+
 </resources>
