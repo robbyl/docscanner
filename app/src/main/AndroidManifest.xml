@@ -85,6 +85,11 @@
         android:name=".PDFToolsActivity"
         android:configChanges="orientation|screenSize"
         android:parentActivityName=".BrowsePDFActivity" />
+
+        <activity
+        android:name=".ScanActivity"
+        android:configChanges="orientation|screenSize"
+        android:parentActivityName=".BrowsePDFActivity" />
     <activity
         android:name=".StarredPDFActivity"
         android:configChanges="orientation|screenSize"

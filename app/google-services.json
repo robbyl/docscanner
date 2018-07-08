@@ -1,0 +1,117 @@
+{
+  "project_info": {
+    "project_number": "353396038689",
+    "firebase_url": "https://all-pdf.firebaseio.com",
+    "project_id": "all-pdf",
+    "storage_bucket": "all-pdf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353396038689:android:48629d5ddb1d7a9d",
+        "android_client_info": {
+          "package_name": "tz.co.wadau.allpdf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353396038689-ecqgtuhthp54c4sa92ofn2q6tgo7j2rp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tz.co.wadau.allpdf",
+            "certificate_hash": "2365ccb612235007f3a3b3474737f7a4514b0d08"
+          }
+        },
+        {
+          "client_id": "353396038689-lusq8d02sj1nslnntdjnjto0bnp4oeel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5_eHRYlYnxr3KmLZq5BEXhTrlAooUnQU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "353396038689-lusq8d02sj1nslnntdjnjto0bnp4oeel.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353396038689:android:5fe03850f794bf9e",
+        "android_client_info": {
+          "package_name": "tz.co.wadau.allpdfpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353396038689-lusq8d02sj1nslnntdjnjto0bnp4oeel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5_eHRYlYnxr3KmLZq5BEXhTrlAooUnQU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353396038689:android:1a99cf905654f752",
+        "android_client_info": {
+          "package_name": "tz.co.wadau.documentscanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353396038689-lusq8d02sj1nslnntdjnjto0bnp4oeel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5_eHRYlYnxr3KmLZq5BEXhTrlAooUnQU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

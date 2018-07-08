@@ -1,9 +1,12 @@
 package tz.co.wadau.documentscanner;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -63,6 +66,7 @@ public class BrowsePDFActivity extends AppCompatActivity
     private boolean gridViewEnabled;
     MenuItem menuListViewItem;
     MenuItem menuGridViewItem;
+    static int REQUEST_CODE_SCAN = 11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -147,6 +151,14 @@ public class BrowsePDFActivity extends AppCompatActivity
                     case R.id.nav_stared:
                         startActivity(new Intent(mContext, StarredPDFActivity.class));
                         break;
+                    case R.id.nav_scan:
+                        Intent intent = new Intent(mContext, ScanActivity.class);
+                        intent.putExtra(ScanActivity.EXTRA_BRAND_IMG_RES, R.drawable.ic_crop_white_24dp); // Set image for title icon - optional
+                        intent.putExtra(ScanActivity.EXTRA_TITLE, "Crop Document"); // Set title in action Bar - optional
+                        intent.putExtra(ScanActivity.EXTRA_ACTION_BAR_COLOR, R.color.blue); // Set title color - optional
+                        intent.putExtra(ScanActivity.EXTRA_LANGUAGE, "en"); // Set language - optional
+                        startActivityForResult(intent, REQUEST_CODE_SCAN);
+                        break;
                     case R.id.nav_tools:
                         startActivity(new Intent(mContext, PDFToolsActivity.class));
                         break;
@@ -213,6 +225,14 @@ public class BrowsePDFActivity extends AppCompatActivity
             } else {
                 Log.d(TAG, "Uri is null");
             }
+        }
+
+        if (requestCode == REQUEST_CODE_SCAN && resultCode == Activity.RESULT_OK) {
+            String imgPath = intent.getStringExtra(ScanActivity.RESULT_IMAGE_PATH);
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+            Bitmap bitmap =  BitmapFactory.decodeFile(imgPath, options);
+//            viewHolder.image.setImageBitmap(bitmap);
         }
     }
 
