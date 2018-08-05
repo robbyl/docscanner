@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="tz.co.wadau.documentscanner">
@@ -9,131 +10,131 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning" >
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".LaunchScreenActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:theme="@style/LaunchScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    <activity
-        android:name=".LaunchScreenActivity"
-        android:label="@string/app_name"
-        android:noHistory="true"
-        android:theme="@style/LaunchScreenTheme">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BrowsePDFActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PDFViewerActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".BrowsePDFActivity">
+            <intent-filter
+                android:scheme="http"
+                tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-    <activity
-        android:name=".BrowsePDFActivity"
-        android:configChanges="orientation|screenSize"
-        android:label="@string/app_name"
-        android:launchMode="singleTop"
-        android:theme="@style/AppTheme.NoActionBar" />
-    <activity
-        android:name=".PDFViewerActivity"
-        android:configChanges="orientation|screenSize"
-        android:parentActivityName=".BrowsePDFActivity">
-        <intent-filter
-            android:scheme="http"
-            tools:ignore="AppLinkUrlError">
-            <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
 
-            <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/pdf" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-            <data android:mimeType="application/pdf" />
-        </intent-filter>
-        <intent-filter>
-            <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
 
-            <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.pdf"
+                    android:scheme="file" />
+            </intent-filter>
 
-            <data
-                android:host="*"
-                android:pathPattern=".*\\.pdf"
-                android:scheme="file" />
-        </intent-filter>
-
-        <!-- <intent-filter> -->
-        <!-- <action android:name="android.intent.action.VIEW" /> -->
-
-
-        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
-        <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.VIEW" /> -->
 
 
-        <!-- <data -->
-        <!-- android:host="*" -->
-        <!-- android:pathPattern=".*\\.pdf" -->
-        <!-- android:scheme="http" /> -->
-        <!-- <data -->
-        <!-- android:host="*" -->
-        <!-- android:pathPattern=".*\\.pdf" -->
-        <!-- android:scheme="https" /> -->
-        <!-- </intent-filter> -->
-    </activity>
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
 
-    <provider
-        android:name="android.support.v4.content.FileProvider"
-        android:authorities="tz.co.wadau.documentscanner.fileprovider"
-        android:exported="false"
-        android:grantUriPermissions="true">
-        <meta-data
-            android:name="android.support.FILE_PROVIDER_PATHS"
-            android:resource="@xml/file_paths" />
-    </provider>
 
-    <activity
-        android:name=".PDFToolsActivity"
-        android:configChanges="orientation|screenSize"
-        android:parentActivityName=".BrowsePDFActivity" />
+            <!-- <data -->
+            <!-- android:host="*" -->
+            <!-- android:pathPattern=".*\\.pdf" -->
+            <!-- android:scheme="http" /> -->
+            <!-- <data -->
+            <!-- android:host="*" -->
+            <!-- android:pathPattern=".*\\.pdf" -->
+            <!-- android:scheme="https" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="tz.co.wadau.documentscanner.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <activity
-        android:name=".ScanActivity"
-        android:configChanges="orientation|screenSize"
-        android:parentActivityName=".BrowsePDFActivity" />
-    <activity
-        android:name=".StarredPDFActivity"
-        android:configChanges="orientation|screenSize"
-        android:parentActivityName=".BrowsePDFActivity" />
-    <activity
-        android:name=".SelectPDFActivity"
-        android:configChanges="orientation|screenSize"
-        android:parentActivityName=".PDFToolsActivity" />
-    <activity
-        android:name=".EditMetadataActivity"
-        android:configChanges="orientation|screenSize"
-        android:parentActivityName=".PDFToolsActivity" />
-    <activity
-        android:name=".OrganizePagesActivity"
-        android:configChanges="orientation|screenSize"
-        android:parentActivityName=".PDFToolsActivity" />
-    <activity
-        android:name=".OrganizeMergePDFActivity"
-        android:configChanges="orientation|screenSize"
-        android:parentActivityName=".PDFToolsActivity" />
-    <activity
-        android:name=".ShareAsPictureActivity"
-        android:parentActivityName=".BrowsePDFActivity" />
-    <activity
-        android:name=".AboutActivity"
-        android:parentActivityName=".BrowsePDFActivity" />
-    <activity
-        android:name=".ViewImagesActivity"
-        android:parentActivityName=".PDFToolsActivity" />
-    <activity
-        android:name=".ExtractTextsPagesActivity"
-        android:parentActivityName=".PDFToolsActivity" />
-    <activity
-        android:name=".SelectImagesActivity"
-        android:parentActivityName=".PDFToolsActivity" />
-    <activity
-        android:name=".OrganizeImagesActivity"
-        android:parentActivityName=".SelectImagesActivity" />
-    <activity
-        android:name=".FileBrowserActivity"
-        android:parentActivityName=".BrowsePDFActivity" />
-    <activity android:name=".SettingsActivity" />
-    <activity
-        android:name=".ContentsActivity"
-        android:parentActivityName=".PDFViewerActivity" />
-</application>
+            android:name=".PDFToolsActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".BrowsePDFActivity" />
+        <activity
+            android:name=".ScanOldActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".BrowsePDFActivity" />
+        <activity
+            android:name=".StarredPDFActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".BrowsePDFActivity" />
+        <activity
+            android:name=".SelectPDFActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".PDFToolsActivity" />
+        <activity
+            android:name=".EditMetadataActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".PDFToolsActivity" />
+        <activity
+            android:name=".OrganizePagesActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".PDFToolsActivity" />
+        <activity
+            android:name=".OrganizeMergePDFActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".PDFToolsActivity" />
+        <activity
+            android:name=".ShareAsPictureActivity"
+            android:parentActivityName=".BrowsePDFActivity" />
+        <activity
+            android:name=".AboutActivity"
+            android:parentActivityName=".BrowsePDFActivity" />
+        <activity
+            android:name=".ViewImagesActivity"
+            android:parentActivityName=".PDFToolsActivity" />
+        <activity
+            android:name=".ExtractTextsPagesActivity"
+            android:parentActivityName=".PDFToolsActivity" />
+        <activity
+            android:name=".SelectImagesActivity"
+            android:parentActivityName=".PDFToolsActivity" />
+        <activity
+            android:name=".OrganizeImagesActivity"
+            android:parentActivityName=".SelectImagesActivity" />
+        <activity
+            android:name=".FileBrowserActivity"
+            android:parentActivityName=".BrowsePDFActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name=".ContentsActivity"
+            android:parentActivityName=".PDFViewerActivity" />
+        <activity android:name=".ScanDocumentActivity"></activity>
+    </application>
+
 </manifest>

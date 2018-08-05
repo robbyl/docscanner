@@ -466,7 +466,7 @@ public class ScanFragment extends Fragment {
     }
 
     private static List<PointF> getContourEdgePoints(Bitmap tempBitmap) {
-//        float[] points = ScanActivity.getPoints(tempBitmap);
+//        float[] points = ScanOldActivity.getPoints(tempBitmap);
 //        float x1 = points[0];
 //        float x2 = points[1];
 //        float x3 = points[2];
