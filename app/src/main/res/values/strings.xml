@@ -164,4 +164,15 @@
     <string name="pdf_file_has_no_contents">PDF file has no contents</string>
     <string name="no_bookmarks">No bookmarks</string>
     <string name="light_mode">Light mode</string>
+
+    <string name="document_scann_lib_name" translatable="false">ScanLibrary</string>
+    <string name="finish">Finish</string>
+    <string name="crop">Crop</string>
+    <string name="rotate">Rotate</string>
+    <string name="cant_crop">Can\'t crop the image, change the points</string>
+    <string name="transforming">Transforming...</string>
+
+    <string name="mode_none">None</string>
+    <string name="mode_black_white">Black &amp; White</string>
+    <string name="mode_magic">Magic</string>
 </resources>

@@ -12,6 +12,11 @@
             android:title="@string/all_documents" />
 
         <item
+            android:id="@+id/nav_scan"
+            android:icon="@drawable/ic_menu_scan"
+            android:title="Scan" />
+
+        <item
             android:id="@+id/nav_stared"
             android:icon="@drawable/ic_nav_stared"
             android:title="@string/stared" />
