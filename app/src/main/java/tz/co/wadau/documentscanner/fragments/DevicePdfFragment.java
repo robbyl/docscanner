@@ -234,9 +234,11 @@ public class DevicePdfFragment extends Fragment
 
     public void requestStoragePermission() {
 
-        final String[] permissions = new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
+        final String[] permissions = new String[]{
+                Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                Manifest.permission.CAMERA};
+                Manifest.permission.CAMERA
+        };
 
         if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)) {
             Toast.makeText(activityCompat, "Read storage permission is required to list files", Toast.LENGTH_SHORT).show();

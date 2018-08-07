@@ -28,8 +28,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.scanlibrary.ScanActivity;
-import com.scanlibrary.ScanConstants;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -164,11 +162,8 @@ public class BrowsePDFActivity extends AppCompatActivity
 //                        intent.putExtra(ScanOldActivity.EXTRA_LANGUAGE, "en"); // Set language - optional
 //                        startActivityForResult(intent, REQUEST_CODE_SCAN);
 
+                        startActivity(new Intent(mContext, ScanDocumentActivity.class));
 
-                        int preference = ScanConstants.OPEN_CAMERA;
-                        Intent intent = new Intent(mContext, ScanActivity.class);
-                        intent.putExtra(ScanConstants.OPEN_INTENT_PREFERENCE, preference);
-                        startActivityForResult(intent, REQUEST_CODE);
                         break;
                     case R.id.nav_tools:
                         startActivity(new Intent(mContext, PDFToolsActivity.class));
@@ -246,17 +241,17 @@ public class BrowsePDFActivity extends AppCompatActivity
 ////            viewHolder.image.setImageBitmap(bitmap);
 //        }
 
-        if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            Uri uri = intent.getExtras().getParcelable(ScanConstants.SCANNED_RESULT);
-            Bitmap bitmap = null;
-            try {
-                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-                getContentResolver().delete(uri, null, null);
-//                scannedImageView.setImageBitmap(bitmap);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+//        if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+//            Uri uri = intent.getExtras().getParcelable(ScanConstants.SCANNED_RESULT);
+//            Bitmap bitmap = null;
+//            try {
+//                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+//                getContentResolver().delete(uri, null, null);
+////                scannedImageView.setImageBitmap(bitmap);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
     }
 
     @Override
